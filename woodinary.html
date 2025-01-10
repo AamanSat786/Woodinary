@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Save Dimensions to Excel</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
   </head>
   <body>
     <h1>Length and Breadth to Excel</h1>
@@ -20,28 +19,7 @@
 
     <script>
       function saveToExcel() {
-        // Get input values
-        const length = document.getElementById("length").value;
-        const breadth = document.getElementById("breadth").value;
-
-        if (!length || !breadth) {
-          alert("Please fill in both Length and Breadth.");
-          return;
-        }
-
-        // Data for Excel
-        const data = [
-          ["Length", "Breadth"], // Headers
-          [length, breadth], // Values
-        ];
-
-        // Create a workbook and a worksheet
-        const worksheet = XLSX.utils.aoa_to_sheet(data);
-        const workbook = XLSX.utils.book_new();
-        XLSX.utils.book_append_sheet(workbook, worksheet, "Dimensions");
-
-        // Export the workbook
-        XLSX.writeFile(workbook, "Dimensions.xlsx");
+        console.log("Hello");
       }
     </script>
   </body>
